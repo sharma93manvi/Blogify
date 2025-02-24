@@ -6,16 +6,16 @@
     <title>Blogify</title>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
-<body>
+<body class="welcome">
     <%- include("header.ejs") %>
 
-    <main class="welcome">
+    <main>
         <h1> Welcome to your Blogs</h1>
         <p> Your own space to write & share. </p>
 
        <% if(posts == 0) { %>
             <p class="no-posts">No posts yet. Start by creating one!</p>
-            <a href="/newpost" class="new-post-btn">Create New Post</h1>
+            <a href="/newblog" class="new-blog-btn">Create New Blog</a>
        <% }else{ %>
             <ul>
                 <% posts.forEach(post => { %>

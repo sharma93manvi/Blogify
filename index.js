@@ -2,6 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+import morgan from "morgan";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();  
@@ -10,6 +11,7 @@ let posts = [];
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.use(morgan("combined"));
 
 app.get("/", (req, res) => {
     // res.send("Hello");
@@ -18,6 +20,10 @@ app.get("/", (req, res) => {
 
 app.get("/about", (req, res) => {
     res.render("about.ejs");
+})
+
+app.get("/newblog", (req, res) => {
+    res.render("newblog.ejs");
 })
 
 app.listen(port, () => {
