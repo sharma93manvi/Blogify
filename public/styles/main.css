@@ -28,18 +28,25 @@ nav a {
 }
 
 .about-page {
-    background: url("/images/1.2-about.jpg");
+    background: url("/images/1.1-Blog-Cover.jpg");
     background-size: contain;
     align-items: center;
     padding: 2rem;
     text-align: center;
     justify-content: center;
     color: #555;
+    border: 1px solid #ddd;
 }
 
 .about-us {
     max-width: 800px;
     margin-left: 35rem;
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
 }
 
 .no-posts {
